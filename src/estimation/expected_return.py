@@ -36,7 +36,7 @@ class ExpectedReturnSpecification(dict):
 
     def __init__(self,
                  method='geometric',
-                 scalefactor=1,
+                 scalefactor=1,         # for yearly would be 365 or 252
                  **kwargs):
         super().__init__(
             method=method,

@@ -28,7 +28,7 @@ class Constraints:
         self.budget = {'Amat': None, 'sense': None, 'rhs': None}
         self.box = {'box_type': 'NA', 'lower': None, 'upper': None}
         self.linear = {'G': None, 'sense': None, 'rhs': None}
-        self.l1 = {}
+        self.l1 = {}    # absolute value constraint -> required for transaction costs
 
     @property
     def ids(self):
