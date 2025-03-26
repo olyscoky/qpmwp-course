@@ -171,12 +171,18 @@ class QuadraticProgram():
         # Convert to sparse matrices for best performance
         if self.solver_settings['solver'] in SPARSE_SOLVERS:
             if self.solver_settings['sparse']:
+                print(2)
                 if problem.P is not None:
                     problem.P = spa.csc_matrix(problem.P)
                 if problem.A is not None:
                     problem.A = spa.csc_matrix(problem.A)
                 if problem.G is not None:
                     problem.G = spa.csc_matrix(problem.G)
+
+        #import sys
+        #import time
+        #time.sleep(3)
+        #sys.exit()
 
         # Solve the problem
         solution = qpsolvers.solve_problem(
